@@ -43,7 +43,7 @@ export default async function BlogIndexPage({ params }: Props) {
         <p className="text-xs font-bold uppercase tracking-[0.25em] text-emerald">
           {nav("blog")}
         </p>
-        <h1 className="mt-2 text-3xl font-extrabold tracking-tight text-ink sm:text-4xl">
+        <h1 className="mt-2 text-3xl font-bold tracking-tight text-ink sm:text-4xl">
           {t("h1")}
         </h1>
         <p className="mt-4 text-ink-secondary">{t("lead")}</p>
@@ -56,7 +56,7 @@ export default async function BlogIndexPage({ params }: Props) {
               <p className="text-[10px] font-bold uppercase tracking-widest text-ink-muted">
                 {post.date}
               </p>
-              <h2 className="mt-2 text-xl font-extrabold tracking-tight text-ink">
+              <h2 className="mt-2 text-xl font-bold tracking-tight text-ink">
                 <Link href={lp(loc, `/blog/${post.slug}`)} className="hover:text-emerald-dark">
                   {post.title}
                 </Link>

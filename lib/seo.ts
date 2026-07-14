@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import type { AppLocale } from "@/i18n/routing";
-import { locales } from "@/i18n/routing";
+import { locales, routing } from "@/i18n/routing";
 import { getSiteUrl } from "@/lib/site-config";
 
 export type LocalizedPath =
@@ -12,6 +12,7 @@ export type LocalizedPath =
   | `blog/${string}`;
 
 const OG_LOCALE_MAP: Record<AppLocale, string> = {
+  en: "en_GB",
   sv: "sv_SE",
   da: "da_DK",
   nb: "nb_NO",
@@ -34,7 +35,7 @@ export function alternateLanguages(
   for (const locale of locales) {
     map[locale] = `${site}${pathForLocale(locale, page)}`;
   }
-  map["x-default"] = `${site}/sv${page ? `/${page}` : ""}`;
+  map["x-default"] = `${site}/${routing.defaultLocale}${page ? `/${page}` : ""}`;
   return map;
 }
 

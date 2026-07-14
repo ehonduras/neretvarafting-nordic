@@ -9,5 +9,5 @@ export const metadata: Metadata = {
 };
 
 export default function PickerRootLayout({ children }: { children: ReactNode }) {
-  return <RootShell lang="sv">{children}</RootShell>;
+  return <RootShell lang="en">{children}</RootShell>;
 }

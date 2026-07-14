@@ -5,6 +5,7 @@ export const localePickerLabels: Record<
   AppLocale,
   { flag: string; code: string; name: string }
 > = {
+  en: { flag: "🇬🇧", code: "EN", name: "English" },
   sv: { flag: "🇸🇪", code: "SV", name: "Svenska" },
   da: { flag: "🇩🇰", code: "DA", name: "Dansk" },
   nb: { flag: "🇳🇴", code: "NB", name: "Norsk (bokmål)" },

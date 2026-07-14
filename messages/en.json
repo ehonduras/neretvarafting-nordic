@@ -1,0 +1,230 @@
+{
+  "meta": {
+    "homeTitle": "Neretva Rafting Konjic | Prices & booking",
+    "homeDescription": "Rafting on the Neretva river in Konjic, Bosnia — full-day and half-day trips, IRF-certified guides, clear prices in EUR and BAM."
+  },
+  "nav": {
+    "home": "Home",
+    "booking": "Booking",
+    "about": "About",
+    "gallery": "Gallery",
+    "blog": "Guides"
+  },
+  "common": {
+    "book": "Book now",
+    "call": "Call",
+    "whatsapp": "WhatsApp",
+    "email": "Email",
+    "readBlog": "Read the guide",
+    "bookNow": "Book now"
+  },
+  "home": {
+    "hero": {
+      "h1": "Rafting on the Neretva in Konjic, Bosnia",
+      "hook": "IRF-certified guides, departures from Glavatičevo, transparent prices in EUR and BAM.",
+      "cta": "Book / contact",
+      "statDistanceCaption": "Distance",
+      "statDurationCaption": "On the water",
+      "statClassCaption": "Difficulty",
+      "statSeasonCaption": "Season",
+      "statPriceCaption": "From",
+      "statsDistance": "18–25 km (season)",
+      "statsDuration": "5–6 h on the water",
+      "statsClass": "WW II–IV (sections)",
+      "statsSeason": "Apr–Oct"
+    },
+    "offers": {
+      "title": "Our packages",
+      "intro": "Classic full days, shorter family trips, rafting only, or all-inclusive with lunch — you choose.",
+      "fullInclusive": "Full day — all-inclusive",
+      "fullInclusiveDesc": "Equipment, transfer to the river, BBQ lunch, return transport.",
+      "fullOnly": "Full day — rafting only",
+      "fullOnlyDesc": "Boat, guide, transfer — bring your own food and drinks.",
+      "half": "Half day / family",
+      "halfDesc": "~2 hours on the water, ~7 km, suitable for children from age 5."
+    },
+    "day": {
+      "subtitle": "Your adventure",
+      "title": "Your day on the Neretva",
+      "p1": "We meet in Konjic for a safety briefing and gear — wetsuit, shoes, helmet, and life jacket — then a transfer of about 25 minutes upstream to Glavatičevo. The first kilometres are calm: emerald water and limestone walls, so you find your paddling rhythm before the canyon tightens.",
+      "p2": "Below Glavatičevo the canyon closes in and you paddle through class II–III rapids, with occasional class IV sections during spring runoff. We pass the mouth of the Rakitnica, swim in deep pools, and can jump from cliffs when conditions allow. Midday we stop at a riverside beach for BBQ — meat, salads, fruit, and bread — with time to rest and swim.",
+      "p3": "After lunch the river opens into calmer sections toward Džajići, where transfer takes you back to Konjic. Total 5–6 hours on the water; exact timing depends on water level and group pace. The guide walks through the plan at the morning briefing."
+    },
+    "operator": {
+      "subtitle": "Who we are",
+      "title": "The operator",
+      "body": "We are a rafting operator based in Konjic running IRF-certified trips through the Neretva canyon. Our base is in town; departures are from Glavatičevo, about 25 minutes upstream. Modern self-bailing rafts with 6–8 guests plus guide. Helmets, life jackets, and wetsuits meet international standards and are checked before every trip. Prices are quoted in BAM and EUR with no hidden fees. We reply in English, Swedish, Danish, and Norwegian via WhatsApp, phone, or email — usually within minutes during business hours. Season April–October; in unsafe conditions we reschedule or refund.",
+      "statRating": "Rating",
+      "statReviews": "Google reviews",
+      "statCertified": "Certified guides",
+      "statInsured": "Fully insured"
+    },
+    "safety": {
+      "title": "Safety & equipment",
+      "body": "IRF-standard training, modern rafts, helmets, life jackets, wetsuits, and paddles. Safety briefing before every trip. We monitor weather and water levels; in unsafe conditions we reschedule or refund per policy.",
+      "checklistTitle": "What's included",
+      "check1": "IRF-certified guides",
+      "check2": "Full safety briefing before every trip",
+      "check3": "Helmets, life jackets, and wetsuits",
+      "check4": "Bad weather = reschedule or full refund"
+    },
+    "safetyExtra": "Every boat has a certified guide (skipper) with several years of experience on the Neretva specifically. Equipment is checked daily. We recommend personal travel insurance that covers activities abroad — most European policies do for a normal holiday. In case of injury, the nearest medical care is in Konjic and Mostar (about 30–45 minutes). Emergency plan and contact numbers are shared at booking.",
+    "pricing": {
+      "title": "Prices",
+      "intro": "Price per person. Groups welcome — ask about discounts. Around €50 (100 KM) for all-inclusive.",
+      "perPerson": "per person",
+      "unitHours": "hours",
+      "popular": "Most popular",
+      "colPackage": "Package",
+      "colDuration": "Duration",
+      "colDistance": "Distance",
+      "colIncludes": "Includes",
+      "colPrice": "Price",
+      "notIncluded": "Not included",
+      "notIncludedBody": "Personal travel insurance, souvenirs, tips (optional).",
+      "payment": "Payment",
+      "paymentBody": "Cash on arrival in BAM or EUR."
+    },
+    "gettingHere": {
+      "subtitle": "Getting here",
+      "title": "How to get here",
+      "body": "Most international guests fly to Sarajevo (SJJ) or Mostar (OMO) — direct flights vary by season; common hubs are via Vienna, Frankfurt, or Istanbul. From the airport it is about 1 hour by car to Konjic. EU/Schengen ID is sufficient for Bosnia for a normal tourist visit. We send exact meeting point and parking after booking.",
+      "openMap": "Open in Google Maps",
+      "fromLabel": "from",
+      "routes": [
+        { "city": "London (flight)", "time": "~4–6 h" },
+        { "city": "Frankfurt (flight)", "time": "~3–4 h" },
+        { "city": "Vienna (flight)", "time": "~3–4 h" },
+        { "city": "Sarajevo", "time": "~1 h" }
+      ]
+    },
+    "reviews": {
+      "title": "Guest reviews",
+      "intro": "What our guests say.",
+      "q1": "\"Professional team and an amazing canyon — the highlight of our Balkan trip.\"",
+      "q2": "\"Clear prices and really good food at the BBQ lunch.\"",
+      "q3": "\"Felt safe the whole time; the guide explained every rapid.\""
+    },
+    "faq": {
+      "title": "Frequently asked questions"
+    },
+    "faqItems": [
+      {
+        "q": "Do I need experience?",
+        "a": "No. We cover everything on site; beginners join most public trips."
+      },
+      {
+        "q": "What should I bring?",
+        "a": "Swimwear, towel, dry clothes, water bottle, and sunscreen. River gear is included."
+      },
+      {
+        "q": "Minimum age?",
+        "a": "Half-day/family trips from age 5 in suitable conditions; full day may vary — ask when booking."
+      },
+      {
+        "q": "What if it rains?",
+        "a": "Light rain is normal; in thunderstorms or high water the trip may change. We notify same day if needed."
+      },
+      {
+        "q": "Can I book alone?",
+        "a": "Yes in high season when we can match groups; low season may require a minimum number."
+      },
+      {
+        "q": "Neretva vs Tara?",
+        "a": "See our comparison in the blog — we keep it honest."
+      },
+      {
+        "q": "How do I pay?",
+        "a": "Cash (BAM/EUR) on arrival unless online payment is enabled."
+      },
+      {
+        "q": "Do I need my own insurance?",
+        "a": "We recommend travel insurance that covers activities abroad — standard for international travellers."
+      },
+      {
+        "q": "How cold is the water?",
+        "a": "Summer around 7–8 °C in the river; wetsuit included. Air is warm April–October."
+      },
+      {
+        "q": "Transfer from Sarajevo or Mostar?",
+        "a": "Yes — share flight or hotel details when booking and we will quote private transfer (about 1 hour)."
+      }
+    ],
+    "cta": {
+      "title": "Book your Neretva day from {pricePrimary} per person",
+      "subtitle": "Message on WhatsApp, call, or use the booking page. ({priceSecondary})"
+    }
+  },
+  "booking": {
+    "metaTitle": "Booking & prices | Neretva Rafting Konjic",
+    "metaDescription": "Book Neretva rafting: WhatsApp, phone, or form. Full-day and half-day prices in BAM and EUR.",
+    "h1": "Book rafting on the Neretva in Konjic",
+    "lead": "Fastest replies are on WhatsApp or phone. We confirm date, package, meeting point, and total price in writing. In high season (July–August and weekends in June/September) we recommend booking 24–48 hours ahead. Groups of six or more — ask about a discount. We reply in English, Swedish, Danish, and Norwegian. Mention allergies or dietary needs for the BBQ lunch and we will confirm what is possible.",
+    "form": {
+      "title": "Send a booking request",
+      "intro": "Fill in your details — we reply on WhatsApp during business hours.",
+      "name": "Full name",
+      "namePlaceholder": "Your name",
+      "partySize": "Party size",
+      "partySizePlaceholder": "Number",
+      "date": "Preferred date",
+      "package": "Package",
+      "packageFullInclusive": "Full day — all-inclusive",
+      "packageFullOnly": "Full day — rafting only",
+      "packageHalfFamily": "Half day / family",
+      "whatsapp": "WhatsApp number",
+      "whatsappPlaceholder": "+44 …",
+      "whatsappHelp": "Include country code so we can reach you.",
+      "notes": "Anything else? (optional)",
+      "notesPlaceholder": "Pickup, children in group, dietary needs, etc.",
+      "submit": "Send request",
+      "submitting": "Sending…",
+      "successTitle": "Request received.",
+      "successBody": "Continue on WhatsApp to confirm your spot — the message is pre-filled.",
+      "successCta": "Continue on WhatsApp",
+      "errorTitle": "Something went wrong.",
+      "errorBody": "Try again or message us directly on WhatsApp.",
+      "errors": {
+        "name": "Enter your name.",
+        "partySize": "Party size must be between 1 and 20.",
+        "date": "Choose a future date.",
+        "package": "Choose a package.",
+        "whatsapp": "Enter a valid WhatsApp number.",
+        "notes": "Note is too long (max 500 characters).",
+        "generic": "Check the form and try again."
+      },
+      "altTitle": "Want to skip the form?",
+      "altBody": "WhatsApp or phone is fastest."
+    }
+  },
+  "about": {
+    "metaTitle": "About us — Neretva Rafting Konjic",
+    "metaDescription": "Rafting operator in Konjic — IRF-certified guides, full-day and half-day trips, clear prices in BAM/EUR.",
+    "h1": "About us",
+    "body": "We run IRF-certified rafting on the Neretva river in Konjic, Bosnia and Herzegovina.\n\nThe Neretva flows from the Dinaric Alps through one of Europe's deepest canyons. The classic section starts at Glavatičevo, about 25 minutes upstream from Konjic, and ends near Džajići — 18–25 km of class II–IV depending on water level. The half-day option is shorter and calmer, suitable for families with children from five years old.\n\nWe own and maintain our own fleet and full safety gear — helmets, life jackets, wetsuits, shoes, and paddles — checked before every trip. Our guides hold IRF certification and long experience on this river specifically.\n\nSeason is April–October. Spring runoff brings more action; summer and early autumn are warmer and most popular with international guests.\n\nMost of our guests come from across Europe — often as a day trip or part of a Sarajevo–Mostar itinerary. Konjic is about one hour from both airports.\n\nQuestions? Message us. Ready to book? The booking page is one click away."
+  },
+  "gallery": {
+    "metaTitle": "Gallery | Neretva Rafting Konjic",
+    "metaDescription": "Photos from Neretva trips — action, BBQ, and scenery.",
+    "h1": "Gallery",
+    "lead": "Photos from full-day rafting between Glavatičevo and Džajići — canyon walls, emerald water, class II–IV rapids, riverside BBQ, and calmer sections back toward Konjic."
+  },
+  "blog": {
+    "metaTitle": "Guides | Neretva Rafting Konjic",
+    "metaDescription": "Guides on Neretva rafting, safety, and comparisons with other rivers.",
+    "h1": "Guides",
+    "lead": "Practical articles for travellers planning a Balkan trip.",
+    "readMore": "Read more"
+  },
+  "footer": {
+    "tagline": "Rafting on the Neretva from Konjic.",
+    "rights": "All rights reserved.",
+    "internationalSite": "International website (9 languages)"
+  },
+  "trust": {
+    "item1": "IRF-certified guides",
+    "item2": "Replies in English, Swedish, Danish & Norwegian",
+    "item3": "Reschedule or full refund in bad weather",
+    "item4": "No hidden fees"
+  }
+}

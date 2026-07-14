@@ -1,5 +1,5 @@
 import type { MetadataRoute } from "next";
-import { locales } from "@/i18n/routing";
+import { locales, routing } from "@/i18n/routing";
 import { getPost, getPostSlugs } from "@/lib/blog";
 import { getSiteUrl } from "@/lib/site-config";
 import type { AppLocale } from "@/i18n/routing";
@@ -17,7 +17,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       const path = page ? `/${locale}/${page}` : `/${locale}`;
       languages[locale] = `${site}${path}`;
     }
-    languages["x-default"] = `${site}/sv${page ? `/${page}` : ""}`;
+    languages["x-default"] = `${site}/${routing.defaultLocale}${page ? `/${page}` : ""}`;
 
     for (const locale of locales) {
       const path = page ? `/${locale}/${page}` : `/${locale}`;
@@ -43,7 +43,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     for (const loc of slugLocs) {
       languages[loc] = `${site}/${loc}/blog/${slug}`;
     }
-    languages["x-default"] = languages.sv ?? Object.values(languages)[0]!;
+    languages["x-default"] =
+      languages[routing.defaultLocale] ?? Object.values(languages)[0]!;
 
     for (const loc of slugLocs) {
       const post = getPost(loc, slug);

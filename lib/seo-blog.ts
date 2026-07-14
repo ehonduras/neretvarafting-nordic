@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import type { AppLocale } from "@/i18n/routing";
-import { locales } from "@/i18n/routing";
+import { locales, routing } from "@/i18n/routing";
 import { getPostSlugs } from "@/lib/blog";
 import { getSiteUrl } from "@/lib/site-config";
 import { ogLocale } from "@/lib/seo";
@@ -22,9 +22,9 @@ export function buildBlogArticleMetadata(input: {
       languages[loc] = `${site}/${loc}/blog/${input.slug}`;
     }
   }
-  // x-default → Swedish when available, otherwise the first locale that has the post.
-  if (languages.sv) {
-    languages["x-default"] = languages.sv;
+  const defaultLang = languages[routing.defaultLocale];
+  if (defaultLang) {
+    languages["x-default"] = defaultLang;
   } else {
     const first = Object.values(languages)[0];
     if (first) languages["x-default"] = first;

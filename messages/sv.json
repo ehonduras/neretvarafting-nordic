@@ -151,8 +151,8 @@
       }
     ],
     "cta": {
-      "title": "Boka din Neretva-dag från €{minPrice} per person",
-      "subtitle": "Skriv på WhatsApp, ring eller använd bokningssidan."
+      "title": "Boka din Neretva-dag från {pricePrimary} per person",
+      "subtitle": "Skriv på WhatsApp, ring eller använd bokningssidan. ({priceSecondary})"
     }
   },
   "booking": {
@@ -220,5 +220,11 @@
     "tagline": "Forsränning på Neretva från Konjic.",
     "rights": "Alla rättigheter förbehållna.",
     "internationalSite": "Internationell webbplats (9 språk)"
+  },
+  "trust": {
+    "item1": "IRF-certifierade guider",
+    "item2": "Svarar på svenska, danska och norska",
+    "item3": "Ombokning eller full återbetalning vid dåligt väder",
+    "item4": "Inga dolda avgifter"
   }
 }

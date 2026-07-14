@@ -8,6 +8,8 @@ import type {
 } from "@/lib/booking-types";
 import { trackEvent } from "@/lib/analytics";
 import { siteConfig } from "@/lib/site-config";
+import { formatPrice } from "@/lib/locale-pricing";
+import type { AppLocale } from "@/i18n/routing";
 
 export type BookingFormCopy = {
   title: string;
@@ -92,7 +94,7 @@ export function BookingForm({ locale, sourcePage, copy }: Props) {
   if (state.status === "success") {
     return (
       <div className="rounded-xl border border-emerald/30 bg-emerald-wash p-6 sm:p-8">
-        <h2 className="text-lg font-extrabold tracking-tight text-emerald-deep">
+        <h2 className="text-lg font-bold tracking-tight text-emerald-deep">
           {copy.successTitle}
         </h2>
         <p className="mt-3 text-sm leading-relaxed text-ink-secondary">
@@ -100,25 +102,25 @@ export function BookingForm({ locale, sourcePage, copy }: Props) {
         </p>
         <dl className="mt-5 grid gap-2 text-sm text-ink-secondary sm:grid-cols-2">
           <div>
-            <dt className="text-xs font-bold uppercase tracking-wide text-ink-muted">
+            <dt className="text-xs font-medium text-ink-muted">
               {copy.name}
             </dt>
             <dd className="text-ink">{state.summary.name}</dd>
           </div>
           <div>
-            <dt className="text-xs font-bold uppercase tracking-wide text-ink-muted">
+            <dt className="text-xs font-medium text-ink-muted">
               {copy.partySize}
             </dt>
             <dd className="text-ink">{state.summary.partySize}</dd>
           </div>
           <div>
-            <dt className="text-xs font-bold uppercase tracking-wide text-ink-muted">
+            <dt className="text-xs font-medium text-ink-muted">
               {copy.date}
             </dt>
             <dd className="text-ink">{state.summary.date}</dd>
           </div>
           <div>
-            <dt className="text-xs font-bold uppercase tracking-wide text-ink-muted">
+            <dt className="text-xs font-medium text-ink-muted">
               {copy.package}
             </dt>
             <dd className="text-ink">{state.summary.package}</dd>
@@ -128,7 +130,7 @@ export function BookingForm({ locale, sourcePage, copy }: Props) {
           href={state.whatsappUrl}
           target="_blank"
           rel="noopener noreferrer"
-          className="mt-6 inline-flex items-center justify-center rounded-lg bg-emerald px-6 py-3 text-sm font-bold text-white shadow-lg shadow-emerald/30 transition hover:bg-emerald-dark"
+          className="mt-6 inline-flex items-center justify-center rounded-lg bg-emerald px-6 py-3 text-sm font-semibold text-white transition hover:bg-emerald-dark"
         >
           {copy.successCta}
         </a>
@@ -143,7 +145,7 @@ export function BookingForm({ locale, sourcePage, copy }: Props) {
       noValidate
     >
       <div>
-        <h2 className="text-lg font-extrabold tracking-tight text-ink">
+        <h2 className="text-lg font-bold tracking-tight text-ink">
           {copy.title}
         </h2>
         <p className="mt-1 text-sm text-ink-secondary">{copy.intro}</p>
@@ -226,7 +228,7 @@ export function BookingForm({ locale, sourcePage, copy }: Props) {
             return (
               <label
                 key={pkg.id}
-                className="cursor-pointer rounded-md border border-transparent bg-surface p-3 text-center text-sm transition hover:border-emerald/40 has-[:checked]:border-emerald has-[:checked]:bg-emerald-wash has-[:checked]:font-bold has-[:checked]:text-emerald-deep"
+                className="cursor-pointer rounded-md border border-transparent bg-surface p-3 text-center text-sm transition hover:border-emerald/30 has-[:checked]:border-emerald has-[:checked]:bg-emerald-wash has-[:checked]:font-semibold has-[:checked]:text-emerald-deep"
               >
                 <input
                   type="radio"
@@ -237,7 +239,8 @@ export function BookingForm({ locale, sourcePage, copy }: Props) {
                 />
                 <span className="block">{labelText}</span>
                 <span className="mt-1 block text-xs text-ink-muted">
-                  €{pkg.priceEur} · {pkg.priceKm} KM
+                  {formatPrice(locale as AppLocale, pkg.priceEur).primary} ·{" "}
+                  {formatPrice(locale as AppLocale, pkg.priceEur).secondary}
                 </span>
               </label>
             );
@@ -282,7 +285,7 @@ export function BookingForm({ locale, sourcePage, copy }: Props) {
       <button
         type="submit"
         disabled={pending}
-        className="w-full rounded-lg bg-emerald px-6 py-3 text-sm font-bold uppercase tracking-wide text-white shadow-lg shadow-emerald/30 transition hover:bg-emerald-dark disabled:cursor-not-allowed disabled:opacity-60"
+        className="w-full rounded-lg bg-emerald px-6 py-3 text-sm font-semibold text-white transition hover:bg-emerald-dark disabled:cursor-not-allowed disabled:opacity-60"
       >
         {pending ? copy.submitting : copy.submit}
       </button>
@@ -303,7 +306,7 @@ function Field({
 }) {
   return (
     <label className="block">
-      <span className="text-xs font-bold uppercase tracking-wide text-ink">
+      <span className="text-sm font-medium text-ink">
         {label}
       </span>
       <div className="mt-1.5">{children}</div>

@@ -121,8 +121,8 @@
       { "q": "Transfer fra Sarajevo eller Mostar?", "a": "Ja — oppgi fly- eller hotellinfo ved booking." }
     ],
     "cta": {
-      "title": "Book Neretva-dagen din fra €{minPrice} per person",
-      "subtitle": "Send melding på WhatsApp, ring eller bruk bookingsiden."
+      "title": "Book Neretva-dagen din fra {pricePrimary} per person",
+      "subtitle": "Send melding på WhatsApp, ring eller bruk bookingsiden. ({priceSecondary})"
     }
   },
   "booking": {
@@ -190,5 +190,11 @@
     "tagline": "Rafting på Neretva fra Konjic.",
     "rights": "Alle rettigheter reservert.",
     "internationalSite": "Internasjonal nettside (9 språk)"
+  },
+  "trust": {
+    "item1": "IRF-sertifiserte guider",
+    "item2": "Svarer på norsk, svensk og dansk",
+    "item3": "Ombooking eller full refusjon ved dårlig vær",
+    "item4": "Ingen skjulte avgifter"
   }
 }

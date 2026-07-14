@@ -6,8 +6,8 @@ import { VideoBackdrop } from "@/components/VideoBackdrop";
 import { localePickerLabels } from "@/lib/locale-labels";
 
 export const metadata: Metadata = {
-  title: "Neretva Rafting Konjic — Välj språk",
-  description: "Forsränning på floden Neretva i Konjic, Bosnien. Välj språk för att fortsätta.",
+  title: "Neretva Rafting Konjic — Choose language",
+  description: "Rafting on the Neretva river in Konjic, Bosnia. Choose your language to continue.",
   robots: { index: false, follow: true },
 };
 
@@ -27,11 +27,11 @@ export default function RootLanguagePage() {
             <p className="text-center text-xs font-bold uppercase tracking-[0.3em] text-emerald-bright">
               Neretva Rafting · Konjic
             </p>
-            <h1 className="mt-3 text-center text-2xl font-extrabold tracking-tight sm:mt-4 sm:text-4xl">
-              Välj språk
+            <h1 className="mt-3 text-center text-2xl font-bold tracking-tight sm:mt-4 sm:text-4xl">
+              Choose language
             </h1>
             <p className="mt-2 text-center text-sm leading-relaxed text-white/75 sm:mt-3">
-              Forsränning på Neretva — välj svenska, danska eller norska.
+              Rafting on the Neretva — choose English, Swedish, Danish, or Norwegian.
             </p>
             <ul className="mt-5 flex max-h-[min(28vh,188px)] flex-col gap-2 overflow-y-auto overscroll-y-contain pr-1 [-webkit-overflow-scrolling:touch] sm:mt-10 sm:max-h-none sm:overflow-visible">
               {locales.map((locale) => {
@@ -64,7 +64,7 @@ export default function RootLanguagePage() {
             </ul>
           </div>
           <p className="mt-5 text-center text-xs text-white/45 sm:mt-8">
-            Bosnien och Hercegovina · IRF-certifierade guider
+            Bosnia and Herzegovina · IRF-certified guides
           </p>
         </div>
       </div>

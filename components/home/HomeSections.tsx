@@ -8,12 +8,14 @@ import { lp } from "@/lib/locale-path";
 import type { HomeSectionId } from "@/lib/home-sections";
 import { getHeroImage, getCtaImage, getGalleryImages, urlFor } from "@/lib/sanity";
 import { getGoogleReviews } from "@/lib/google-reviews";
+import { formatPrice, featuredPriceEur } from "@/lib/locale-pricing";
 import { TrackedLink } from "@/components/TrackedLink";
 
 /* ─── Hero ─── */
 async function HeroSection({ locale }: { locale: AppLocale }) {
   const t = await getTranslations("home.hero");
   const hero = await getHeroImage();
+  const fromPrice = formatPrice(locale, featuredPriceEur());
   const heroSrc = hero?.image
     ? urlFor(hero.image).width(1920).quality(80).auto("format").url()
     : "/images/hero-canyon.jpg";
@@ -31,12 +33,12 @@ async function HeroSection({ locale }: { locale: AppLocale }) {
         className="object-cover"
         sizes="100vw"
       />
-      <div className="absolute inset-0 bg-gradient-to-t from-ink via-ink/60 to-transparent" />
+      <div className="absolute inset-0 bg-gradient-to-t from-ink/90 via-ink/40 to-ink/10" />
       <div className="relative mx-auto flex max-w-7xl flex-col justify-end px-4 pb-16 pt-40 sm:px-6 sm:pb-20 lg:px-8">
-        <p className="text-xs font-bold uppercase tracking-[0.25em] text-emerald-bright">
+        <p className="text-xs font-semibold uppercase tracking-[0.2em] text-emerald-bright">
           Konjic · Bosnia &amp; Herzegovina
         </p>
-        <h1 className="mt-4 max-w-4xl text-4xl font-extrabold leading-[1.1] tracking-tight sm:text-5xl lg:text-6xl">
+        <h1 className="mt-4 max-w-4xl text-4xl font-bold leading-[1.1] tracking-tight sm:text-5xl lg:text-6xl">
           {t("h1")}
         </h1>
         <p className="hero-hook mt-5 max-w-2xl text-lg font-medium text-white/80">
@@ -48,7 +50,7 @@ async function HeroSection({ locale }: { locale: AppLocale }) {
             href={lp(locale, "/booking")}
             event="book_cta_click"
             eventParams={{ source: "hero", locale }}
-            className="flex items-center justify-center rounded-lg bg-emerald px-4 py-3.5 text-sm font-bold uppercase tracking-wide text-white shadow-lg shadow-emerald/30 transition hover:bg-emerald-dark"
+            className="flex items-center justify-center rounded-lg bg-emerald px-4 py-3 text-sm font-semibold text-white transition hover:bg-emerald-dark"
           >
             {t("cta")}
           </TrackedLink>
@@ -57,24 +59,35 @@ async function HeroSection({ locale }: { locale: AppLocale }) {
             href={`tel:${siteConfig.contact.phone}`}
             event="phone_click"
             eventParams={{ source: "hero", locale }}
-            className="flex items-center justify-center rounded-lg border-2 border-white/30 bg-white/10 px-4 py-3.5 text-sm font-bold uppercase tracking-wide backdrop-blur-sm transition hover:border-white/50 hover:bg-white/20"
+            className="flex items-center justify-center rounded-lg border border-white/30 bg-white/5 px-4 py-3 text-sm font-semibold transition hover:border-white/50 hover:bg-white/10"
           >
             {siteConfig.contact.phoneDisplay}
           </TrackedLink>
         </div>
-        <dl className="mt-14 grid max-w-4xl grid-cols-2 gap-px overflow-hidden rounded-xl bg-white/10 sm:grid-cols-5">
+        <dl className="mt-14 grid max-w-4xl grid-cols-2 gap-px overflow-hidden rounded-lg border border-white/15 sm:grid-cols-5">
           {[
             { cap: t("statDistanceCaption"), val: t("statsDistance") },
             { cap: t("statDurationCaption"), val: t("statsDuration") },
             { cap: t("statClassCaption"), val: t("statsClass") },
             { cap: t("statSeasonCaption"), val: t("statsSeason") },
-            { cap: t("statPriceCaption"), val: `€${Math.min(...siteConfig.packages.map((p) => p.priceEur))}` },
+            {
+              cap: t("statPriceCaption"),
+              val: fromPrice.primary,
+              sub: fromPrice.secondary,
+            },
           ].map((row) => (
-            <div key={row.cap} className="bg-ink/70 px-5 py-4 backdrop-blur-sm">
-              <dt className="text-[10px] font-bold uppercase tracking-widest text-emerald-bright">
+            <div key={row.cap} className="bg-ink/50 px-5 py-4">
+              <dt className="text-[10px] font-semibold uppercase tracking-widest text-emerald-bright">
                 {row.cap}
               </dt>
-              <dd className="mt-1 text-xl font-extrabold text-white">{row.val}</dd>
+              <dd className="mt-1 text-xl font-bold text-white">
+                {row.val}
+                {"sub" in row && row.sub ? (
+                  <span className="mt-0.5 block text-xs font-medium text-white/50">
+                    {row.sub}
+                  </span>
+                ) : null}
+              </dd>
             </div>
           ))}
         </dl>
@@ -87,27 +100,23 @@ async function HeroSection({ locale }: { locale: AppLocale }) {
 async function OffersSection() {
   const t = await getTranslations("home.offers");
   const items = [
-    { title: t("fullInclusive"), body: t("fullInclusiveDesc"), icon: "🏔" },
-    { title: t("fullOnly"), body: t("fullOnlyDesc"), icon: "🚣" },
-    { title: t("half"), body: t("halfDesc"), icon: "👨‍👩‍👧" },
+    { title: t("fullInclusive"), body: t("fullInclusiveDesc") },
+    { title: t("fullOnly"), body: t("fullOnlyDesc") },
+    { title: t("half"), body: t("halfDesc") },
   ];
   return (
     <section className="mx-auto max-w-7xl px-4 py-20 sm:px-6 lg:px-8">
-      <div className="flex items-center gap-3">
-        <div className="h-8 w-1 rounded-full bg-emerald" />
-        <h2 className="text-2xl font-extrabold tracking-tight text-ink sm:text-3xl">
-          {t("title")}
-        </h2>
-      </div>
+      <h2 className="text-2xl font-bold tracking-tight text-ink sm:text-3xl">
+        {t("title")}
+      </h2>
       <p className="mt-4 max-w-3xl text-ink-secondary">{t("intro")}</p>
       <ul className="mt-10 grid gap-5 md:grid-cols-3">
         {items.map((item) => (
           <li
             key={item.title}
-            className="group rounded-xl border border-border bg-surface p-6 transition hover:border-emerald/40 hover:shadow-lg hover:shadow-emerald/5"
+            className="rounded-xl border border-border bg-surface p-6 transition hover:border-emerald/30"
           >
-            <span className="text-3xl">{item.icon}</span>
-            <h3 className="mt-4 text-lg font-bold text-ink">{item.title}</h3>
+            <h3 className="text-lg font-semibold text-ink">{item.title}</h3>
             <p className="mt-2 text-sm text-ink-secondary">{item.body}</p>
           </li>
         ))}
@@ -143,7 +152,7 @@ async function DaySection() {
         <p className="text-xs font-bold uppercase tracking-[0.25em] text-emerald-bright">
           {t("subtitle")}
         </p>
-        <h2 className="mt-2 text-2xl font-extrabold tracking-tight sm:text-3xl">
+        <h2 className="mt-2 text-2xl font-bold tracking-tight sm:text-3xl">
           {t("title")}
         </h2>
         <div className="relative mt-12 grid gap-6 md:grid-cols-3">
@@ -151,7 +160,7 @@ async function DaySection() {
           {steps.map((step) => (
             <div key={step.num} className="relative">
               <div className="mb-4 flex items-center gap-4">
-                <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-emerald text-sm font-extrabold text-white">
+                <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-emerald text-sm font-bold text-white">
                   {step.num}
                 </span>
                 <div className="h-px flex-1 bg-white/10 md:hidden" />
@@ -179,10 +188,10 @@ async function OperatorSection() {
     <section className="mx-auto max-w-7xl px-4 py-20 sm:px-6 lg:px-8">
       <div className="grid gap-12 lg:grid-cols-2 lg:items-center">
         <div>
-          <p className="text-xs font-bold uppercase tracking-[0.25em] text-emerald">
+          <p className="text-xs font-semibold uppercase tracking-[0.2em] text-emerald">
             {t("subtitle")}
           </p>
-          <h2 className="mt-2 text-2xl font-extrabold tracking-tight text-ink sm:text-3xl">
+          <h2 className="mt-2 text-2xl font-bold tracking-tight text-ink sm:text-3xl">
             {t("title")}
           </h2>
           <p className="operator-body mt-5 leading-relaxed text-ink-secondary">
@@ -195,8 +204,8 @@ async function OperatorSection() {
               key={s.label}
               className="rounded-xl border border-border bg-surface-alt p-5 text-center"
             >
-              <p className="text-3xl font-extrabold text-emerald-dark">{s.value}</p>
-              <p className="mt-1 text-xs font-bold uppercase tracking-wide text-ink-muted">
+              <p className="text-3xl font-bold text-emerald-dark">{s.value}</p>
+              <p className="mt-1 text-xs font-medium text-ink-muted">
                 {s.label}
               </p>
             </div>
@@ -208,25 +217,24 @@ async function OperatorSection() {
 }
 
 /* ─── Safety — badge-style card with checklist ─── */
-async function SafetySection({ locale }: { locale: AppLocale }) {
+async function SafetySection({ locale: _locale }: { locale: AppLocale }) {
   const t = await getTranslations("home.safety");
   const messages = await getMessages();
   const home = messages.home as { safetyExtra?: string };
   const extraText = home.safetyExtra?.trim() ?? "";
-  const isNordic = true;
 
   const checks = [t("check1"), t("check2"), t("check3"), t("check4")];
 
   return (
-    <section className={isNordic ? "bg-emerald-wash" : "bg-surface-alt"}>
+    <section className="bg-emerald-wash">
       <div className="mx-auto max-w-7xl px-4 py-20 sm:px-6 lg:px-8">
-        <div className="overflow-hidden rounded-2xl border border-border bg-surface shadow-sm">
+        <div className="overflow-hidden rounded-2xl border border-border bg-surface">
           <div className="grid lg:grid-cols-5">
-            <div className="flex flex-col justify-center bg-emerald-deep p-8 text-white lg:col-span-2">
+            <div className="flex flex-col justify-center bg-emerald-dark p-8 text-white lg:col-span-2">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.5} className="h-10 w-10 text-emerald-bright">
                 <path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z" />
               </svg>
-              <h2 className="mt-4 text-2xl font-extrabold tracking-tight sm:text-3xl">
+              <h2 className="mt-4 text-2xl font-bold tracking-tight sm:text-3xl">
                 {t("title")}
               </h2>
               <p className="mt-3 text-sm leading-relaxed text-emerald-tint/80">
@@ -274,12 +282,9 @@ async function PricingSection({ locale }: { locale: AppLocale }) {
 
   return (
     <section className="mx-auto max-w-7xl px-4 py-20 sm:px-6 lg:px-8">
-      <div className="flex items-center gap-3">
-        <div className="h-8 w-1 rounded-full bg-emerald" />
-        <h2 className="text-2xl font-extrabold tracking-tight text-ink sm:text-3xl">
-          {tp("title")}
-        </h2>
-      </div>
+      <h2 className="text-2xl font-bold tracking-tight text-ink sm:text-3xl">
+        {tp("title")}
+      </h2>
       <p className="mt-4 max-w-3xl text-ink-secondary">{tp("intro")}</p>
       <div className="mt-10 grid gap-5 md:grid-cols-3">
         {siteConfig.packages.map((pkg) => {
@@ -292,44 +297,42 @@ async function PricingSection({ locale }: { locale: AppLocale }) {
                 ? to("fullOnly")
                 : to("half");
           const isFeatured = pkg.id === "full-inclusive";
+          const price = formatPrice(locale, pkg.priceEur);
           return (
             <div
               key={pkg.id}
-              className={`flex flex-col ${
+              className={`flex flex-col rounded-2xl border p-7 ${
                 isFeatured
-                  ? "relative overflow-hidden rounded-2xl border-2 border-emerald bg-emerald-deep p-7 text-white shadow-xl shadow-emerald/20"
-                  : "rounded-2xl border border-border bg-surface p-7 transition hover:shadow-lg hover:shadow-ink/5"
+                  ? "border-emerald bg-emerald-wash"
+                  : "border-border bg-surface"
               }`}
             >
               {isFeatured && (
-                <span className="mb-3 w-fit rounded-full bg-emerald-bright/20 px-3 py-1 text-[10px] font-bold uppercase tracking-widest text-emerald-bright">
+                <span className="mb-3 w-fit rounded-full bg-emerald/10 px-3 py-1 text-[10px] font-semibold uppercase tracking-widest text-emerald">
                   {tp("popular")}
                 </span>
               )}
-              <p className={`text-xs font-bold uppercase tracking-widest ${isFeatured ? "text-emerald-bright" : "text-emerald"}`}>
+              <p className="text-xs font-semibold uppercase tracking-widest text-emerald">
                 {name}
               </p>
-              <p className={`mt-4 text-4xl font-extrabold tracking-tight ${isFeatured ? "text-white" : "text-ink"}`}>
-                €{pkg.priceEur}
-                <span className={`ml-2 text-sm font-medium ${isFeatured ? "text-white/60" : "text-ink-muted"}`}>
-                  / {pkg.priceKm} KM
-                </span>
+              <p className="mt-4 text-4xl font-bold tracking-tight text-ink">
+                {price.primary}
               </p>
-              <p className={`mt-1 text-xs ${isFeatured ? "text-white/50" : "text-ink-muted"}`}>
-                {tp("perPerson")}
+              <p className="mt-1 text-sm text-ink-muted">
+                {price.secondary} · {tp("perPerson")}
               </p>
-              <div className={`mt-5 flex-1 space-y-3 border-t pt-5 text-sm ${isFeatured ? "border-white/20 text-white/70" : "border-border text-ink-secondary"}`}>
+              <div className="mt-5 flex-1 space-y-3 border-t border-border pt-5 text-sm text-ink-secondary">
                 <div className="flex items-center gap-2">
-                  <svg viewBox="0 0 20 20" fill="currentColor" className={`h-4 w-4 shrink-0 ${isFeatured ? "text-emerald-bright" : "text-emerald"}`}>
+                  <svg viewBox="0 0 20 20" fill="currentColor" className="h-4 w-4 shrink-0 text-emerald">
                     <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm.75-13a.75.75 0 00-1.5 0v5c0 .414.336.75.75.75h4a.75.75 0 000-1.5h-3.25V5z" clipRule="evenodd" />
                   </svg>
                   {pkg.durationHours} {tp("unitHours")}
                 </div>
                 <div className="flex items-center gap-2">
-                  <svg viewBox="0 0 20 20" fill="currentColor" className={`h-4 w-4 shrink-0 ${isFeatured ? "text-emerald-bright" : "text-emerald"}`}>
+                  <svg viewBox="0 0 20 20" fill="currentColor" className="h-4 w-4 shrink-0 text-emerald">
                     <path fillRule="evenodd" d="M9.69 18.933l.003.001C9.89 19.02 10 19 10 19s.11.02.308-.066l.002-.001.006-.003.018-.008a5.741 5.741 0 00.281-.14c.186-.096.446-.24.757-.433.62-.384 1.445-.966 2.274-1.765C15.302 14.988 17 12.493 17 9A7 7 0 103 9c0 3.492 1.698 5.988 3.355 7.584a13.731 13.731 0 002.274 1.765 11.842 11.842 0 00.976.544l.062.029.018.008.006.003zM10 11.25a2.25 2.25 0 100-4.5 2.25 2.25 0 000 4.5z" clipRule="evenodd" />
                   </svg>
-                  {pkg.distanceKm} km
+                  {pkg.distanceKm} km · {pkg.priceKm} KM
                 </div>
                 <p className="pt-1">{includes}</p>
               </div>
@@ -338,9 +341,9 @@ async function PricingSection({ locale }: { locale: AppLocale }) {
                 href={lp(locale, "/booking")}
                 event="book_cta_click"
                 eventParams={{ source: "pricing", locale }}
-                className={`mt-6 block w-full rounded-lg py-3 text-center text-sm font-bold uppercase tracking-wide transition ${
+                className={`mt-6 block w-full rounded-lg py-3 text-center text-sm font-semibold transition ${
                   isFeatured
-                    ? "bg-white text-emerald-deep hover:bg-emerald-tint"
+                    ? "bg-emerald text-white hover:bg-emerald-dark"
                     : "border border-emerald text-emerald hover:bg-emerald-wash"
                 }`}
               >
@@ -376,7 +379,7 @@ async function GettingHereSection() {
               <p className="text-xs font-bold uppercase tracking-[0.25em] text-emerald">
                 {t("subtitle")}
               </p>
-              <h2 className="mt-2 text-2xl font-extrabold tracking-tight text-ink sm:text-3xl">
+              <h2 className="mt-2 text-2xl font-bold tracking-tight text-ink sm:text-3xl">
                 {t("title")}
               </h2>
               <p className="mt-4 leading-relaxed text-ink-secondary">{t("body")}</p>
@@ -384,7 +387,7 @@ async function GettingHereSection() {
                 href={siteConfig.meetingPointMapsUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="mt-6 inline-flex rounded-lg bg-emerald px-5 py-2.5 text-sm font-bold text-white transition hover:bg-emerald-dark"
+                className="mt-6 inline-flex rounded-lg bg-emerald px-5 py-2.5 text-sm font-semibold text-white transition hover:bg-emerald-dark"
               >
                 {t("openMap")} ↗
               </a>
@@ -392,8 +395,8 @@ async function GettingHereSection() {
             <div className="grid grid-cols-2 gap-px bg-border">
               {routes.map((r) => (
                 <div key={r.city} className="flex flex-col items-center justify-center bg-surface p-6 text-center">
-                  <p className="text-2xl font-extrabold text-ink">{r.time}</p>
-                  <p className="mt-1 text-xs font-bold uppercase tracking-wide text-ink-muted">
+                  <p className="text-2xl font-bold text-ink">{r.time}</p>
+                  <p className="mt-1 text-xs font-medium text-ink-muted">
                     {t("fromLabel")} {r.city}
                   </p>
                 </div>
@@ -418,7 +421,7 @@ async function FaqSection() {
           <p className="text-xs font-bold uppercase tracking-[0.25em] text-emerald">
             FAQ
           </p>
-          <h2 className="mt-2 text-2xl font-extrabold tracking-tight text-ink sm:text-3xl">
+          <h2 className="mt-2 text-2xl font-bold tracking-tight text-ink sm:text-3xl">
             {t("title")}
           </h2>
         </div>
@@ -465,12 +468,11 @@ async function ReviewsSection() {
   const topReviews = data.reviews.slice(0, 3);
 
   return (
-    <section className="relative overflow-hidden bg-emerald-deep text-white">
-      <div className="absolute inset-0 opacity-[0.07]" style={{ backgroundImage: "url(\"data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E\")" }} />
+    <section className="bg-emerald-deep text-white">
       <div className="relative mx-auto max-w-7xl px-4 py-20 sm:px-6 lg:px-8">
         <div className="flex flex-col items-center text-center">
           <div className="flex items-center gap-3">
-            <span className="text-5xl font-extrabold">{data.rating}</span>
+            <span className="text-5xl font-bold">{data.rating}</span>
             <div>
               <div className="flex">{stars(Math.round(data.rating))}</div>
               <p className="mt-0.5 text-xs font-bold text-emerald-tint/70">
@@ -483,7 +485,7 @@ async function ReviewsSection() {
           {topReviews.map((review, i) => (
             <div
               key={i}
-              className="rounded-2xl bg-white/10 p-6 backdrop-blur-sm transition hover:bg-white/15"
+              className="rounded-2xl border border-white/15 bg-white/5 p-6 transition hover:bg-white/10"
             >
               <div className="flex">{stars(review.rating)}</div>
               <p className="mt-4 text-sm leading-relaxed text-white/80 line-clamp-5">
@@ -522,7 +524,7 @@ async function CtaSection({ locale }: { locale: AppLocale }) {
   const bgSrc = cta?.image
     ? urlFor(cta.image).width(1920).quality(75).auto("format").url()
     : null;
-  const minPrice = Math.min(...siteConfig.packages.map((p) => p.priceEur));
+  const price = formatPrice(locale, featuredPriceEur());
 
   return (
     <section className="relative overflow-hidden text-white">
@@ -535,17 +537,19 @@ async function CtaSection({ locale }: { locale: AppLocale }) {
             className="object-cover"
             sizes="100vw"
           />
-          <div className="absolute inset-0 bg-emerald-deep/80" />
+          <div className="absolute inset-0 bg-emerald-deep/75" />
         </>
       ) : (
         <div className="absolute inset-0 bg-emerald-deep" />
       )}
       <div className="relative mx-auto flex max-w-7xl flex-col gap-8 px-4 py-32 sm:flex-row sm:items-center sm:justify-between sm:px-6 sm:py-40 lg:px-8 lg:py-50">
         <div>
-          <h2 className="text-2xl font-extrabold tracking-tight sm:text-3xl">
-            {t("title", { minPrice })}
+          <h2 className="text-2xl font-bold tracking-tight sm:text-3xl">
+            {t("title", { pricePrimary: price.primary })}
           </h2>
-          <p className="mt-3 max-w-xl text-emerald-tint/80">{t("subtitle")}</p>
+          <p className="mt-3 max-w-xl text-emerald-tint/80">
+            {t("subtitle", { priceSecondary: price.secondary })}
+          </p>
         </div>
         <div className="flex flex-wrap gap-3">
           <TrackedLink
@@ -553,7 +557,7 @@ async function CtaSection({ locale }: { locale: AppLocale }) {
             href={lp(locale, "/booking")}
             event="book_cta_click"
             eventParams={{ source: "footer_cta", locale }}
-            className="rounded-lg bg-white px-6 py-3 text-sm font-bold uppercase tracking-wide text-emerald-deep transition hover:bg-emerald-tint"
+            className="rounded-lg bg-white px-6 py-3 text-sm font-semibold text-emerald-deep transition hover:bg-emerald-tint"
           >
             {c("book")}
           </TrackedLink>
@@ -562,7 +566,7 @@ async function CtaSection({ locale }: { locale: AppLocale }) {
             href={whatsappHref()}
             event="whatsapp_click"
             eventParams={{ source: "footer_cta", locale }}
-            className="rounded-lg border-2 border-white/30 px-6 py-3 text-sm font-bold uppercase tracking-wide transition hover:border-white/60 hover:bg-white/10"
+            className="rounded-lg border border-white/30 px-6 py-3 text-sm font-semibold transition hover:border-white/60 hover:bg-white/10"
           >
             {c("whatsapp")}
           </TrackedLink>

@@ -1,15 +1,15 @@
 import type { ReactNode } from "react";
 import Script from "next/script";
-import { Plus_Jakarta_Sans } from "next/font/google";
+import { Inter } from "next/font/google";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 
 const GA_MEASUREMENT_ID = process.env.NEXT_PUBLIC_GA_ID?.trim() ?? "";
 const GOOGLE_ADS_ID = process.env.NEXT_PUBLIC_GOOGLE_ADS_ID?.trim() ?? "";
 
-const jakarta = Plus_Jakarta_Sans({
+const inter = Inter({
   subsets: ["latin", "latin-ext"],
-  variable: "--font-jakarta",
-  weight: ["400", "500", "600", "700", "800"],
+  variable: "--font-inter",
+  weight: ["400", "500", "600", "700"],
 });
 
 export function RootShell({
@@ -24,7 +24,7 @@ export function RootShell({
   return (
     <html lang={lang}>
       <body
-        className={`${jakarta.variable} min-h-screen bg-surface font-sans text-ink antialiased`}
+        className={`${inter.variable} min-h-screen bg-surface font-sans text-ink antialiased`}
       >
         {children}
         <SpeedInsights />

@@ -27,6 +27,7 @@ export function localBusinessJsonLd(
   if (operatorGbpUrl) sameAs.push(operatorGbpUrl);
 
   const descriptions: Record<AppLocale, string> = {
+    en: "Neretva rafting in Konjic, Bosnia and Herzegovina — IRF-certified guides, full-day and half-day trips.",
     sv: "Neretva-rafting i Konjic, Bosnien och Hercegovina — IRF-certifierade guider, heldags- och halvdagsturer.",
     da: "Neretva-rafting i Konjic, Bosnien-Hercegovina — IRF-certificerede guider, heldags- og halvdagsture.",
     nb: "Neretva-rafting i Konjic, Bosnia-Hercegovina — IRF-sertifiserte guider, heldags- og halvdagsturer.",

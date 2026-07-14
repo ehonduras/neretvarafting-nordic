@@ -76,7 +76,7 @@ export default async function GalleryPage({ params }: Props) {
         <p className="text-xs font-bold uppercase tracking-[0.25em] text-emerald">
           {nav("gallery")}
         </p>
-        <h1 className="mt-2 text-3xl font-extrabold tracking-tight text-ink sm:text-4xl">
+        <h1 className="mt-2 text-3xl font-bold tracking-tight text-ink sm:text-4xl">
           {t("h1")}
         </h1>
         <p className="mt-4 max-w-2xl text-ink-secondary">{t("lead")}</p>

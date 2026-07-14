@@ -42,7 +42,7 @@ export default async function AboutPage({ params }: Props) {
         <p className="text-xs font-bold uppercase tracking-[0.25em] text-emerald">
           {nav("about")}
         </p>
-        <h1 className="mt-2 text-3xl font-extrabold tracking-tight text-ink sm:text-4xl">
+        <h1 className="mt-2 text-3xl font-bold tracking-tight text-ink sm:text-4xl">
           {t("h1")}
         </h1>
         <p className="mt-6 whitespace-pre-wrap text-ink-secondary">{t("body")}</p>

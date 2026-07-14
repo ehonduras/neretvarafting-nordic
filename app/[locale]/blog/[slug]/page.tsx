@@ -102,7 +102,7 @@ export default async function BlogPostPage({ params }: Props) {
             </svg>
             {blog("h1")}
           </Link>
-          <h1 className="mt-6 text-3xl font-extrabold leading-tight tracking-tight text-ink sm:text-4xl lg:text-[2.75rem]">
+          <h1 className="mt-6 text-3xl font-bold leading-tight tracking-tight text-ink sm:text-4xl lg:text-[2.75rem]">
             {post.title}
           </h1>
           <p className="mt-4 text-base leading-relaxed text-ink-secondary sm:text-lg">

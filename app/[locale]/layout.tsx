@@ -5,6 +5,7 @@ import { hasLocale } from "next-intl";
 import { setRequestLocale } from "next-intl/server";
 import { routing } from "@/i18n/routing";
 import { Header } from "@/components/Header";
+import { TrustStrip } from "@/components/TrustStrip";
 import { Footer } from "@/components/Footer";
 import { FloatingWhatsapp } from "@/components/FloatingWhatsapp";
 import { RootShell } from "@/components/RootShell";
@@ -39,6 +40,7 @@ export default async function LocaleLayout({
     <RootShell lang={loc}>
       <div dir="ltr" className="flex min-h-screen flex-col">
         <Header locale={loc} />
+        <TrustStrip locale={loc} />
         <main className="flex-1">{children}</main>
         <Footer locale={loc} />
         <FloatingWhatsapp locale={loc} />

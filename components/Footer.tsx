@@ -13,13 +13,13 @@ export async function Footer({ locale }: { locale: AppLocale }) {
     <footer className="mt-auto border-t border-border bg-ink text-white">
       <div className="mx-auto grid max-w-7xl gap-10 px-4 py-12 sm:grid-cols-2 sm:px-6 lg:grid-cols-3 lg:px-8">
         <div>
-          <p className="text-lg font-extrabold uppercase tracking-tight">
-            Neretva<span className="text-emerald-bright">Rafting</span>
+          <p className="text-lg font-bold tracking-tight">
+            Neretva<span className="text-emerald-bright"> Rafting</span>
           </p>
           <p className="mt-2 text-sm text-white/60">{t("tagline")}</p>
         </div>
         <div>
-          <p className="text-xs font-bold uppercase tracking-widest text-emerald-bright">
+          <p className="text-xs font-semibold uppercase tracking-widest text-emerald-bright">
             {nav("booking")}
           </p>
           <ul className="mt-3 space-y-2 text-sm text-white/70">
