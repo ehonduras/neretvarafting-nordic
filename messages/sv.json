@@ -1,0 +1,224 @@
+{
+  "meta": {
+    "homeTitle": "Neretva-rafting Konjic | Priser & bokning",
+    "homeDescription": "Forsränning på floden Neretva i Konjic, Bosnien — heldags- och halvdagsturer, IRF-certifierade guider, tydliga priser i EUR och BAM."
+  },
+  "nav": {
+    "home": "Hem",
+    "booking": "Bokning",
+    "about": "Om oss",
+    "gallery": "Galleri",
+    "blog": "Guider"
+  },
+  "common": {
+    "book": "Boka nu",
+    "call": "Ring",
+    "whatsapp": "WhatsApp",
+    "email": "E-post",
+    "readBlog": "Läs guiden",
+    "bookNow": "Boka nu"
+  },
+  "home": {
+    "hero": {
+      "h1": "Forsränning på Neretva i Konjic, Bosnien",
+      "hook": "IRF-certifierade guider, avfärd från Glavatičevo, transparenta priser i EUR och BAM.",
+      "cta": "Boka / kontakt",
+      "statDistanceCaption": "Sträcka",
+      "statDurationCaption": "På vattnet",
+      "statClassCaption": "Svårighetsgrad",
+      "statSeasonCaption": "Säsong",
+      "statPriceCaption": "Från",
+      "statsDistance": "18–25 km (säsong)",
+      "statsDuration": "5–6 h på vattnet",
+      "statsClass": "WW II–IV (partier)",
+      "statsSeason": "apr–okt"
+    },
+    "offers": {
+      "title": "Våra paket",
+      "intro": "Klassiska heldagar, kortare familjeturer, enbart forsränning eller all-inclusive med lunch — du väljer.",
+      "fullInclusive": "Heldags — all-inclusive",
+      "fullInclusiveDesc": "Utrustning, transfer till floden, BBQ-lunch, returtransport.",
+      "fullOnly": "Heldags — enbart forsränning",
+      "fullOnlyDesc": "Båt, guide, transfer — ta med egen mat och dryck.",
+      "half": "Halvdag / familj",
+      "halfDesc": "~2 timmar på vattnet, ~7 km, lämpligt för barn från 5 år."
+    },
+    "day": {
+      "subtitle": "Ditt äventyr",
+      "title": "Din dag på Neretva",
+      "p1": "Vi ses i Konjic för säkerhetsgenomgång och utrustning — våtdräkt, skor, hjälm och flytväst — sedan transfer cirka 25 minuter uppströms till Glavatičevo. De första kilometrarna är lugna: smaragdgrönt vatten och kalkstensväggar, så du hittar paddlingstakten innan kanjonen stramar åt.",
+      "p2": "Under Glavatičevo stänger kanjonen in floden och du paddlar genom class II–III-fors, med enstaka class IV-partier vid vårflod. Vi passerar Rakitnicas mynningspunkt, simmar i djupa hålor och kan hoppa från klippor när förhållandena tillåter. Mitt på dagen stannar vi vid en flodstrand för BBQ — kött, sallader, frukt och bröd — med tid att vila och simma.",
+      "p3": "Efter lunchen öppnar sig floden i lugnare partier mot Džajići, där transfer tar dig tillbaka till Konjic. Totalt 5–6 timmar på vattnet; exakta tider beror på vattenstånd och gruppens tempo. Guiden går igenom planen på morgonbriefingen."
+    },
+    "operator": {
+      "subtitle": "Vilka vi är",
+      "title": "Operatören",
+      "body": "Vi är en forsränningoperatör baserad i Konjic med IRF-certifierade turer genom Neretvas kanjon. Basen ligger i staden; avfärden sker vid Glavatičevo, cirka 25 minuter uppströms. Moderna självlensande båtar med 6–8 gäster plus guide. Hjälmar, flytväster och våtdräkter uppfyller internationella standarder och kontrolleras före varje tur. Priser anges i BAM och EUR utan dolda avgifter. Vi svarar på svenska, danska och norska via WhatsApp, telefon eller e-post — oftast inom minuter under arbetstid. Säsong april–oktober; vid osäkra förhållanden bokar vi om eller återbetalar.",
+      "statRating": "Betyg",
+      "statReviews": "Google-recensioner",
+      "statCertified": "Certifierade guider",
+      "statInsured": "Fullt försäkrade"
+    },
+    "safety": {
+      "title": "Säkerhet & utrustning",
+      "body": "IRF-anpassad utbildning, moderna båtar, hjälmar, flytvästar, våtdräkter och paddlar. Säkerhetsgenomgång före varje tur. Vi följer väder och vattenstånd; vid osäkra förhållanden bokar vi om eller återbetalar enligt policy.",
+      "checklistTitle": "Detta ingår",
+      "check1": "IRF-certifierade guider",
+      "check2": "Full säkerhetsgenomgång före varje tur",
+      "check3": "Hjälmar, flytvästar och våtdräkter",
+      "check4": "Dåligt väder = ombokning eller full återbetalning"
+    },
+    "safetyExtra": "Varje båt har en certifierad guide (skipper) med flera års erfarenhet just på Neretva. Utrustningen kontrolleras dagligen. Vi rekommenderar egen reseförsäkring som täcker aktiviteter i utlandet — de flesta nordiska försäkringar gör det vid normal semesterresa. Vid skada finns närmaste sjukvård i Konjic och Mostar (cirka 30–45 minuter). Nödplan och kontaktnummer delas vid bokning.",
+    "pricing": {
+      "title": "Priser",
+      "intro": "Pris per person. Grupper välkomna — fråga om rabatt. Cirka 550 SEK / 500 NOK / 370 DKK för all-inclusive (50 EUR).",
+      "perPerson": "per person",
+      "unitHours": "timmar",
+      "popular": "Mest populär",
+      "colPackage": "Paket",
+      "colDuration": "Längd",
+      "colDistance": "Sträcka",
+      "colIncludes": "Ingår",
+      "colPrice": "Pris",
+      "notIncluded": "Ingår inte",
+      "notIncludedBody": "Personlig reseförsäkring, souvenirer, dricks (valfritt).",
+      "payment": "Betalning",
+      "paymentBody": "Kontant vid ankomst i BAM eller EUR."
+    },
+    "gettingHere": {
+      "subtitle": "Resväg",
+      "title": "Så tar du dig hit",
+      "body": "De flesta nordiska gäster flyger till Sarajevo (SJJ) eller Mostar (OMO) — direktflyg från Skandinavien varierar per säsong; vanliga hubbar är via Wien, Frankfurt eller Istanbul. Från flygplatsen är det cirka 1 timme med bil till Konjic. EU-/Schengen-ID räcker för Bosnien för normal turistvist. Vi skickar exakt mötesplats och parkering efter bokning.",
+      "openMap": "Öppna i Google Maps",
+      "fromLabel": "från",
+      "routes": [
+        { "city": "Stockholm (flyg)", "time": "~4–6 h" },
+        { "city": "Oslo (flyg)", "time": "~4–5 h" },
+        { "city": "Köpenhamn (flyg)", "time": "~4–5 h" },
+        { "city": "Sarajevo", "time": "~1 h" }
+      ]
+    },
+    "reviews": {
+      "title": "Gästomdömen",
+      "intro": "Det här säger våra gäster.",
+      "q1": "«Professionellt team och en fantastisk kanjon — höjdpunkten på Balkanresan.»",
+      "q2": "«Tydliga priser och riktigt bra mat vid BBQ-lunchen.»",
+      "q3": "«Kände mig trygg hela tiden; guiden förklarade varje fors.»"
+    },
+    "faq": {
+      "title": "Vanliga frågor"
+    },
+    "faqItems": [
+      {
+        "q": "Behöver jag erfarenhet?",
+        "a": "Nej. Vi genomgår allt på plats; nybörjare följer med på de flesta publikturer."
+      },
+      {
+        "q": "Vad ska jag ta med?",
+        "a": "Badkläder, handduk, torra kläder, vattenflaska och solskydd. Flodutrustning ingår."
+      },
+      {
+        "q": "Minimiålder?",
+        "a": "Halvdags/familjeturer från 5 år under rätt förhållanden; heldag kan variera — fråga vid bokning."
+      },
+      {
+        "q": "Vad händer om det regnar?",
+        "a": "Lätt regn är normalt; vid åska eller högt vatten kan turen ändras. Vi meddelar samma dag vid behov."
+      },
+      {
+        "q": "Kan jag boka ensam?",
+        "a": "Ja under högsäsong när vi kan matcha grupper; lågsäsong kan kräva minimiantal."
+      },
+      {
+        "q": "Neretva vs Tara?",
+        "a": "Se vår jämförelse i bloggen — vi håller oss ärliga."
+      },
+      {
+        "q": "Hur betalar jag?",
+        "a": "Kontant (BAM/EUR) vid ankomst om inte onlinebetalning är aktiverad."
+      },
+      {
+        "q": "Behöver jag egen försäkring?",
+        "a": "Vi rekommenderar reseförsäkring som täcker aktiviteter utomlands — standard för nordiska resenärer."
+      },
+      {
+        "q": "Hur kallt är vattnet?",
+        "a": "Sommar cirka 7–8 °C i floden; våtdräkt ingår. Luften är varm april–oktober."
+      },
+      {
+        "q": "Transfer från Sarajevo eller Mostar?",
+        "a": "Ja — ange flyg- eller hotellinfo vid bokning så offererar vi privat transfer (cirka 1 timme)."
+      }
+    ],
+    "cta": {
+      "title": "Boka din Neretva-dag från €{minPrice} per person",
+      "subtitle": "Skriv på WhatsApp, ring eller använd bokningssidan."
+    }
+  },
+  "booking": {
+    "metaTitle": "Bokning & priser | Neretva Rafting Konjic",
+    "metaDescription": "Boka forsränning på Neretva: WhatsApp, telefon eller formulär. Heldags- och halvdagspriser i BAM och EUR.",
+    "h1": "Boka forsränning på Neretva i Konjic",
+    "lead": "Snabbast svar får du på WhatsApp eller telefon. Vi bekräftar datum, paket, mötesplats och totalpris skriftligt. Under högsäsong (juli–augusti och helger i juni/september) rekommenderar vi bokning 24–48 timmar i förväg. Grupper från sex personer — fråga om rabatt. Vi svarar på svenska, danska och norska. Nämn allergier eller kost vid BBQ-lunchen så bekräftar vi vad som går.",
+    "form": {
+      "title": "Skicka bokningsförfrågan",
+      "intro": "Fyll i uppgifterna — vi svarar på WhatsApp under arbetstid.",
+      "name": "Fullständigt namn",
+      "namePlaceholder": "Ditt namn",
+      "partySize": "Antal personer",
+      "partySizePlaceholder": "Antal",
+      "date": "Önskat datum",
+      "package": "Paket",
+      "packageFullInclusive": "Heldags — all-inclusive",
+      "packageFullOnly": "Heldags — enbart forsränning",
+      "packageHalfFamily": "Halvdag / familj",
+      "whatsapp": "WhatsApp-nummer",
+      "whatsappPlaceholder": "+46 …",
+      "whatsappHelp": "Inkludera landskod så vi kan nå dig.",
+      "notes": "Övrigt? (valfritt)",
+      "notesPlaceholder": "Upphämtning, barn i gruppen, kost, m.m.",
+      "submit": "Skicka förfrågan",
+      "submitting": "Skickar…",
+      "successTitle": "Förfrågan mottagen.",
+      "successBody": "Fortsätt på WhatsApp för att bekräfta plats — meddelandet är förifyllt.",
+      "successCta": "Fortsätt på WhatsApp",
+      "errorTitle": "Något gick fel.",
+      "errorBody": "Försök igen eller skriv till oss direkt på WhatsApp.",
+      "errors": {
+        "name": "Ange ditt namn.",
+        "partySize": "Antal måste vara mellan 1 och 20.",
+        "date": "Välj ett datum i framtiden.",
+        "package": "Välj ett paket.",
+        "whatsapp": "Ange ett giltigt WhatsApp-nummer.",
+        "notes": "Anteckningen är för lång (max 500 tecken).",
+        "generic": "Kontrollera formuläret och försök igen."
+      },
+      "altTitle": "Vill du hoppa över formuläret?",
+      "altBody": "WhatsApp eller telefon är snabbast."
+    }
+  },
+  "about": {
+    "metaTitle": "Om oss — Neretva Rafting Konjic",
+    "metaDescription": "Forsränningoperatör i Konjic — IRF-certifierade guider, heldags- och halvdagsturer, tydliga priser i BAM/EUR.",
+    "h1": "Om oss",
+    "body": "Vi driver IRF-certifierad forsränning på floden Neretva i Konjic, Bosnien och Hercegovina.\n\nNeretva rinner från Dinariska alperna genom en av Europas djupaste kanjoner. Den klassiska sträckan börjar vid Glavatičevo, cirka 25 minuter uppströms från Konjic, och slutar nära Džajići — 18–25 km class II–IV beroende på vattenstånd. Halvdagsalternativet är kortare och lugnare, lämpligt för familjer med barn från fem år.\n\nVi äger och underhåller vår egen flotta och full säkerhetsutrustning — hjälmar, flytväster, våtdräkter, skor och paddlar — kontrollerad före varje tur. Våra guider har IRF-certifiering och lång erfarenhet på just denna flod.\n\nSäsongen är april–oktober. Vårflod ger mer action; sommar och tidig höst är varmare och populärast bland nordiska gäster.\n\nDe flesta av våra gäster kommer från Sverige, Norge och Danmark — ofta som en dagstur eller del av en Sarajevo–Mostar-resa. Konjic ligger ungefär en timme från båda flygplatserna.\n\nFrågor? Skriv till oss. Redo att boka? Bokningssidan är ett klick bort."
+  },
+  "gallery": {
+    "metaTitle": "Galleri | Neretva Rafting Konjic",
+    "metaDescription": "Bilder från Neretva-turer — action, BBQ och landskap.",
+    "h1": "Galleri",
+    "lead": "Bilder från heldagsforsränning mellan Glavatičevo och Džajići — kanjonväggar, smaragdvatten, class II–IV-fors, BBQ vid floden och lugnare partier tillbaka mot Konjic."
+  },
+  "blog": {
+    "metaTitle": "Guider | Neretva Rafting Konjic",
+    "metaDescription": "Guider om Neretva-forsränning, säkerhet och jämförelser med andra floder.",
+    "h1": "Guider",
+    "lead": "Praktiska artiklar för resenärer från Norden.",
+    "readMore": "Läs mer"
+  },
+  "footer": {
+    "tagline": "Forsränning på Neretva från Konjic.",
+    "rights": "Alla rättigheter förbehållna.",
+    "internationalSite": "Internationell webbplats (9 språk)"
+  }
+}
